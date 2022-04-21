@@ -1,12 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400&display=swap');
+
 /* NORMALIZADO */
 *{
     padding: 0;
     margin: 0;
     box-sizing: 0;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* NAVBAR */
-
 
 
 /* CARRUSEL */
