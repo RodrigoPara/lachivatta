@@ -9,6 +9,7 @@
     <title>Chivatta</title>
 </head>
 <body>
+  <!--NAVBAR-->
   <nav class="navbar navbar-expand-md navbar-light bg-faded">
     <ul class="navbar-nav mx-auto">
       <li class="nav-item active text-center">
@@ -18,7 +19,7 @@
         <a class="nav-link" href="./pages/nosotros.html">Nosotros</a>
       </li>
       <li class="nav-item text-center">
-        <a class="nav-link" href="#">Contacto</a>
+        <a class="nav-link" href="./pages/contacto.html">Contacto</a>
       </li>
       <li class="nav-item dropdown text-center">
         <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -32,7 +33,7 @@
       </li>
     </ul>
   </nav>
-  
+  <!--CARRUSEL-->
   <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -41,13 +42,13 @@
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="./img/carpa.png" class="d-block" alt="...">
+        <img src="./img/carpa.png" class="d-block img-fluid" alt=""...">
       </div>
       <div class="carousel-item">
-        <img src="./img/manta.png" class="d-block" alt="...">
+        <img src="./img/manta.png" class="d-block img-fluid" alt="...">
       </div>
       <div class="carousel-item">
-        <img src="./img/monstruo.png" class="d-block" alt="...">
+        <img src="./img/monstruo.jpeg" class="d-block img-fluid" alt="...">
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -59,32 +60,28 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>
+  <!--FOOTER-->
+  <div class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+      <div class="col-md-4 d-flex align-items-center">
+        <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+          <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
+        </a>
+        <span class="text-muted">&copy; 2022, La Chivatta</span>
+      </div>
+      <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+        <li class="ms-3"><a class="text-muted" href="https://www.facebook.com/La-Chivata-368907440281869"><img src="./icons/facebook.png" alt=""></a></li>
+        <li class="ms-3"><a class="text-muted" href="#"><img src="./icons/gorjeo.png" alt=""></a></li>
+        <li class="ms-3"><a class="text-muted" href="https://www.instagram.com/lachivatta/"><img src="./icons/instagram.png" alt=""></a></li>
+      </ul>
+    </footer>
+  </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <!-- Compiled and minified Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
     <!-- Minified JS library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Compiled and minified Bootstrap JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
-
-
-    <div class="b-example-divider"></div>
-
-<div class="container">
-  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-    <div class="col-md-4 d-flex align-items-center">
-      <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
-        <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
-      </a>
-      <span class="text-muted">&copy; 2022, La Chivatta</span>
-    </div>
-
-    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-      <li class="ms-3"><a class="text-muted" href="https://www.facebook.com/La-Chivata-368907440281869"><img src="./icons/facebook.png" alt=""></a></li>
-      <li class="ms-3"><a class="text-muted" href="#"><img src="./icons/gorjeo.png" alt=""></a></li>
-      <li class="ms-3"><a class="text-muted" href="https://www.instagram.com/lachivatta/"><img src="./icons/instagram.png" alt=""></a></li>
-    </ul>
-  </footer>
-</div>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script> 
 </body>
 </html>
