@@ -4,3 +4,19 @@
     margin: 0;
     box-sizing: 0;
 }
+
+/* NAVBAR */
+
+
+
+/* CARRUSEL */
+
+.carousel-inner img{
+    width: 660px;
+    height: 660px;
+    margin: auto;
+}
+
+
+
+/* FOOTER */
