@@ -82,8 +82,4 @@ stockP.forEach((producto) => {
   </div>
 `
 productosCarro.appendChild(divHTML)
-const boton = document.getElementById(`agregar${producto.id}`)
-boton.addEventListener("click", () => {
-    agregalAlCarrito(producto.id)
-})
 })
