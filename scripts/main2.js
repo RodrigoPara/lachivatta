@@ -1,55 +1,92 @@
-let precio, continuaCompra, mensaje;
-const envio = 400;
-let compras = [];
+// PRIMERAS ENTRAGAS - MENUES CARRITO
 
-do {
-  producto = prompt(
-    'Buenos días! Qué desea comprar?\nMonstruo, Manta o Carpa'
-  );
-  switch (producto) {
-    case 'Monstruo':
-      cantidad = prompt('Ingrese cantidad');
-      precio = 4000;
-      compras.push({
-        producto,
-        precio: precio * cantidad + envio,
-      });
-      break;
-    case 'Carpa':
-      cantidad = prompt('Ingrese cantidad');
-      precio = 8000;
-      compras.push({
-        producto,
-        precio: precio * cantidad + envio,
-      });
-      break;
-    case 'Manta':
-      cantidad = prompt('Ingrese cantidad');
-      precio = 2000;
-      compras.push({
-        producto,
-        precio: precio * cantidad + envio,
-      });
-      break;
-    default:
-      alert('Este producto no existe');
-  }
+// let precio, continuaCompra, mensaje;
+// const envio = 400;
+// let compras = [];
 
-  continuaCompra = confirm('Desea comprar algo más?');
-} while (continuaCompra);
+// do {
+//   producto = prompt(
+//     'Buenos días! Qué desea comprar?\nMonstruo, Manta o Carpa'
+//   );
+//   switch (producto) {
+//     case 'Monstruo':
+//       cantidad = prompt('Ingrese cantidad');
+//       precio = 4000;
+//       compras.push({
+//         producto,
+//         precio: precio * cantidad + envio,
+//       });
+//       break;
+//     case 'Carpa':
+//       cantidad = prompt('Ingrese cantidad');
+//       precio = 8000;
+//       compras.push({
+//         producto,
+//         precio: precio * cantidad + envio,
+//       });
+//       break;
+//     case 'Manta':
+//       cantidad = prompt('Ingrese cantidad');
+//       precio = 2000;
+//       compras.push({
+//         producto,
+//         precio: precio * cantidad + envio,
+//       });
+//       break;
+//     default:
+//       alert('Este producto no existe');
+//   }
 
-compras.forEach((compra) => {
-  mensaje += `Producto: ${compra.producto}, Precio: ${compra.precio} \n`;
-});
+//   continuaCompra = confirm('Desea comprar algo más?');
+// } while (continuaCompra);
+
+// compras.forEach((compra) => {
+//   mensaje += `Producto: ${compra.producto}, Precio: ${compra.precio} \n`;
+// });
+
+// alert(mensaje);
 
 
-const indexed = compras.reduce((acc, el) => ({
-    ...acc,
-    [el.precio]: el,
-}), {})
-const total = compras.reduce((acc, el) => acc + el, 0)
+/////////// AGREGAR AL CARRITO
 
-console.log(total);
-console.log(indexed);
+// Productos
 
-alert(mensaje);
+let stockP = [
+  {id: 1, producto: "Escarapela", cantidad: 1, productodesc: "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer", precio: 500, img: "../img/escarapela.jpeg"},
+  {id: 2, producto: "Carpa Tipi", cantidad: 1, productodesc: "Son un excelente juego individual, se emplean mucho para la diversión en grupo. Las pijamadas con carpas tipis, acompañadas de pelis, meriendas y almohadones. En la terraza, bajo el quincho o el balcón. A cielo abierto en el jardín, o en un parque, son garantía de diversión.", precio: 10000, img: "../img/carpa.png"},
+  {id: 3, producto: "Monstruo", cantidad: 1, productodesc: "Suaves, en la más lindas telas y texturas. Ideales para abrazar; en diferentes tamaños, minis, pequeños y grandes.", precio: 7000, img: "../img/monstruo.png"},
+]
+
+// Insertando Cards de productos
+
+stockP.forEach((producto) => {
+  const divHTML = document.createElement("div")
+  divHTML.classList.add("card")
+  divHTML.classList.add("text-white")
+  divHTML.classList.add("bg-dark")
+  divHTML.innerHTML = `<div class="col-md-4 mt-2">
+  <div class="card">
+  <div class="card-body">
+  <div class="card-img-actions">
+  <img src=${producto.img} class="card-img img-fluid" width="96" height="350" alt="">
+  </div>
+  </div>
+  <div class="card-body bg-light text-center">
+  <div class="mb-2">
+  <h6 class="font-weight-semibold mb-2">
+  <h5 class="card-title">${producto.nombre}</h5>
+  </h6>
+  <p class="card-text">${producto.productodesc}</p>
+  </div>
+  <h3 class="mb-0 font-weight-semibold">${producto.precio}</h3>
+  <button type="button" class="btn bg-cart"><i class="fa fa-cart-plus mr-2"></i>Agregar al carrito</button>
+  </div>
+  </div>
+  </div>
+`
+productosCarro.appendChild(divHTML)
+const boton = document.getElementById(`agregar${producto.id}`)
+boton.addEventListener("click", () => {
+    agregalAlCarrito(producto.id)
+})
+})

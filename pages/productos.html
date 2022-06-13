@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="../css/style.css">
     <title>Nosotros</title>
 </head>
-
 <body>
     <nav class="navbar navbar-expand-md navbar-light bg-faded">
         <ul class="navbar-nav mx-auto">
@@ -24,8 +23,8 @@
                 <a class="nav-link" href="./contacto.html">Contacto</a>
             </li>
             <li class="nav-item dropdown text-center">
-                <a class="nav-link dropdown-toggle" href="../pages/productos.html" id="navbarDropdownMenuLink" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="./productos.html" id="navbarDropdownMenuLink"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Productos
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -34,51 +33,88 @@
                     <a class="dropdown-item" href="../pages/productos.html">Mantas</a>
                 </div>
             </li>
-        </ul>
+            <form class="d-flex">
+                <button class="btn btn-outline-dark" type="submit">
+                    <i class="bi-cart-fill me-1"></i>
+                    Su compra
+                    <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                </button>
+            </form>            
+        </ul>        
     </nav>
-    <!-- PRODUCTOS  -->
-
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div class="col">
-            <div class="card h-100">
-                <img src="../img/carpa.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Carpa Tipi</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                        additional content. This content is a little bit longer.</p>
+    <!-- PRODUCTOS -->
+    <section id="productosCarrox">
+    <div class="container d-flex justify-content-center mt-50 mb-50">
+        <div class="row" id="productosCarro">
+            <div class="col-md-4 mt-2">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-img-actions">
+                            <img src="../img/carpa.png" class="card-img img-fluid" width="96" height="350" alt="">
+                        </div>
+                    </div>
+                    <div class="card-body bg-light text-center">
+                        <div class="mb-2">
+                            <h6 class="font-weight-semibold mb-2">
+                                <h5 class="card-title">Carpa Tipi</h5>
+                            </h6>
+                            <p class="card-text">Son un excelente juego individual, se emplean mucho para la diversión
+                                en grupo. Las pijamadas con carpas tipis, acompañadas de pelis, meriendas y almohadones.
+                                En la terraza, bajo el quincho o el balcón. A cielo abierto en el jardín, o en un
+                                parque, son garantía de diversión.</p>
+                        </div>
+                        <h3 class="mb-0 font-weight-semibold">$10000</h3>
+                        <button type="button" class="btn bg-cart"><i class="fa fa-cart-plus mr-2"></i>Agregar al
+                            carrito</button>
+                    </div>
+                </div>
+            </div>            
+            <div class="col-md-4 mt-2">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-img-actions">
+                            <img src="../img/escarapela.jpeg" class="card-img img-fluid" width="96" height="350" alt="">
+                        </div>
+                    </div>
+                    <div class="card-body bg-light text-center">
+                        <div class="mb-2">
+                            <h6 class="font-weight-semibold mb-2">
+                                <h5 class="card-title">Escarapela</h5>
+                            </h6>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in
+                                to
+                                additional content. This content is a little bit longer.</p>
+                        </div>
+                        <h3 class="mb-0 font-weight-semibold">$500</h3>
+                        <button type="button" class="btn bg-cart"><i class="fa fa-cart-plus mr-2"></i>Agregar al
+                            carrito</button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col">
-            <div class="card h-100">
-                <img src="../img/manta.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Manta de lana</h5>
-                    <p class="card-text">This is a short card.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card h-100">
-                <img src="../img/monstruo.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Monstruo de las Emociones</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                        additional content.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card h-100">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                        additional content. This content is a little bit longer.</p>
+            <div class="col-md-4 mt-2">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-img-actions">
+                            <img src="../img/monstruo.jpeg" class="card-img img-fluid" width="96" height="350" alt="">
+                        </div>
+                    </div>
+                    <div class="card-body bg-light text-center">
+                        <div class="mb-2">
+                            <h6 class="font-weight-semibold mb-2">
+                                <h5 class="card-title">Monstruo</h5>
+                            </h6>
+                            <p class="card-text">Suaves, en la más lindas telas y texturas.
+                                Ideales para abrazar; en diferentes tamaños, minis, pequeños y grandes.</p>
+                        </div>
+                        <h3 class="mb-0 font-weight-semibold">$7000</h3>
+                        <button type="button" class="btn bg-cart"><i class="fa fa-cart-plus mr-2"></i>Agregar al
+                            carrito</button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+</section>
 
     <!--FOOTER-->
     <div class="container">
@@ -111,4 +147,5 @@
         crossorigin="anonymous"></script>
     <script src="../scripts/main2.js"></script>
 </body>
+
 </html>
