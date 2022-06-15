@@ -46,12 +46,15 @@
 
 // alert(mensaje);
 
+
+
+
 /////////// AGREGAR AL CARRITO
 
-// Productos
-
+//creación de array para guardar en el carrito
 let carritoComp = []
 
+//carga de productos en array para luego mostrarlo por html
 let stockP = [
   {
     id: 1,
@@ -107,7 +110,7 @@ stockP.forEach((producto) => {
 
   productosCarro.appendChild(divHTML);
 
-//// Capturando eventos 
+//////// Capturando eventos 
 
   const btnshop = document.getElementById(`agregarCarrito${producto.id}`);
   btnshop.addEventListener("click", () => {
