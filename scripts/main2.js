@@ -47,6 +47,12 @@
 // alert(mensaje);
 
 
+const productosCarro = document.getElementById("productosCarro");
+const contenedorCarrito = document.getElementById("carrito-contenedor");
+const botonVaciar = document.getElementById("carritoVaciar");
+const unidadCarrito = document.getElementById("btn-carro");
+const precioTotal = document.getElementById("precioTotal");
+
 
 
 /////////// AGREGAR AL CARRITO
@@ -86,7 +92,6 @@ let stockP = [
 ];
 
 ////////// Insertando Cards de productos
-
 stockP.forEach((producto) => {
   const divHTML = document.createElement("div");
   divHTML.class = "col-md-4 mt-2";
@@ -110,8 +115,7 @@ stockP.forEach((producto) => {
 
   productosCarro.appendChild(divHTML);
 
-//////// Capturando eventos 
-
+  //////// Capturando eventos
   const btnshop = document.getElementById(`agregarCarrito${producto.id}`);
   btnshop.addEventListener("click", () => {
     agregarAlCarrito(producto.id);
@@ -119,12 +123,45 @@ stockP.forEach((producto) => {
 });
 
 ///////// Agregando productos al carrito, por ahora los muestro en un clg
-
-const agregarAlCarrito = (prodId) => {
-  const product = stockP.find ((prod) =>prod.id === prodId)
-  carritoComp.push(product)  
-}
+const agregarAlCarrito = (productoId) => {
+  const product = stockP.find((producto) => producto.id === productoId);
+  carritoComp.push(product);
+  actualizarCarrito();
+};
 
 console.log(carritoComp);
 
+///////////
+
+const eliminarDelCarrito = (productoId) => {
+  const product = carritoComp.find((producto) => producto.Id === productoId);
+  const indice = carritoComp.indexOf(product);
+  carritoComp.splice(indice, 1);
+  actualizarCarrito();
+};
+
+/////////////
+
+const actualizarCarrito = () => {
+  contenedorCarrito.innerHTML = "";
+  carritoComp.forEach((producto) => {
+    const div = document.createElement(`div`);
+    div.className = "carrito-contenedor";
+    div.innerHTML = `
+        <p><b>${producto.nombre}</b></p>
+        <p>Precio: ${producto.precio}</p>
+        <p>Cantidad: <span id="cantidad">${producto.cantidad}</span></p>
+        <button onclick="eliminarDelCarrito(${producto.id})"><i class='bx bx-x'></i></button>
+        `;
+    contenedorCarrito.appendChild(div);
+  });
+
+  unidadCarrito.innerText = carritoComp.length;
+  precioTotal.innerText = carritoComp.reduce((acc, producto) => acc + producto.precio, 0);
+};
+
+botonVaciar.addEventListener("click", () => {
+  carritoComp.length = 0;
+  actualizarCarrito();
+});
 

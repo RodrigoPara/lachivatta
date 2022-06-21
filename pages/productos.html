@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <title>Nosotros</title>
 </head>
+
 <body>
     <nav class="navbar navbar-expand-md navbar-light bg-faded">
         <ul class="navbar-nav mx-auto">
@@ -33,17 +34,17 @@
                     <a class="dropdown-item" href="../pages/productos.html">Mantas</a>
                 </div>
             </li>
-            <!-- carrito compra -->
+            <!-- BTN carrito compra -->
             <div class="d-flex" id="carrito">
-                <button class="btn btn-outline-dark" type="submit">
-                    <i class="bi-cart-fill me-1"></i>
+                <button class="btn btn-outline-dark btn-carro" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <i class="bx bx-cart"></i>
                     Su compra
-                    <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
-                </button>               
+                    <span id="btn-carro"></span>
+                </button>
             </div>            
-        </ul>        
+        </ul>
     </nav>
-    <!-- PRODUCTOS -->    
+    <!-- PRODUCTOS -->
     <div class="container d-flex justify-content-center mt-50 mb-50">
         <div class="row" id="productosCarro">
             <!-- <div class="col-md-4 mt-2">
@@ -113,7 +114,28 @@
                 </div>
             </div> -->
         </div>
-    </div>    
+    </div>
+    <!-- Contenedor Carro -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Carrito</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div id="carrito-contenedor" class="modal-body">
+                    
+
+                </div>
+                <p>Precio total: $<span id="precioTotal"></span></p>
+                <div class="modal-footer">
+                    <button type="button" id="carritoCerrar" class="btn btn-secondary"
+                        data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" id="carritoVaciar" class="btn btn-primary">Vaciar carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <!--FOOTER-->
     <div class="container">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
